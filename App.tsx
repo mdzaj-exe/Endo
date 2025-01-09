@@ -1,13 +1,22 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import { Music, Palette, Bot, Blocks, Users, Sparkles, Globe, Shield } from 'lucide-react';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import MusicHub from './components/music/MusicHub';
-import CreativeSpace from './components/creative/CreativeSpace';
-import EndoBlockchain from './components/blockchain/EndoBlockchain';
-import EndoAI from './components/ai/EndoAI';
-import AboutUs from './components/AboutUs';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import {
+  Music,
+  Palette,
+  Bot,
+  Blocks,
+  Users,
+  Sparkles,
+  Globe,
+  Shield,
+} from "lucide-react";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import MusicHub from "./components/music/MusicHub";
+import CreativeSpace from "./components/creative/CreativeSpace";
+import EndoBlockchain from "./components/blockchain/EndoBlockchain";
+import EndoAI from "./components/ai/EndoAI";
+import AboutUs from "./components/AboutUs";
 
 function App() {
   return (
@@ -36,55 +45,62 @@ function Home() {
     {
       icon: <Music className="w-8 h-8" />,
       title: "Music Hub",
-      description: "Connect, collaborate, and create music with fellow artists. Share your work and discover new talent."
+      description:
+        "Connect, collaborate, and create music with fellow artists. Share your work and discover new talent!",
     },
     {
       icon: <Palette className="w-8 h-8" />,
       title: "Creative Space",
-      description: "A platform for visual artists, writers, and creators to showcase their work and find collaborators."
+      description:
+        "A platform for visual artists, writers, and creators to showcase their work and find collaborators.",
     },
     {
       icon: <Blocks className="w-8 h-8" />,
       title: "Endo Blockchain",
-      description: "Secure your creative rights and earn from your work with our decentralized ecosystem."
+      description:
+        "Secure your creative rights and earn from your work with our decentralized ecosystem.",
     },
     {
       icon: <Bot className="w-8 h-8" />,
       title: "EndoAI",
-      description: "Enhance your creative process with AI-powered tools designed for artists."
-    }
+      description:
+        "Enhance your creative process with AI-powered tools designed for artists.",
+    },
   ];
 
   const benefits = [
     {
       icon: <Shield className="w-6 h-6" />,
       title: "Ownership & Rights",
-      description: "Maintain full control of your creative works with blockchain-verified ownership"
+      description:
+        "Maintain full control of your creative works with blockchain-verified ownership",
     },
     {
       icon: <Users className="w-6 h-6" />,
       title: "Community First",
-      description: "Join a supportive network of creators who help each other grow"
+      description:
+        "Join a supportive network of creators who help each other grow",
     },
     {
       icon: <Globe className="w-6 h-6" />,
       title: "Global Reach",
-      description: "Connect with creators and opportunities worldwide"
+      description: "Connect with creators and opportunities worldwide",
     },
     {
       icon: <Sparkles className="w-6 h-6" />,
       title: "Innovation",
-      description: "Access cutting-edge tools and technology to enhance your creative process"
-    }
+      description:
+        "Access cutting-edge tools and technology to enhance your creative process",
+    },
   ];
 
   return (
     <div className="text-white space-y-16">
       <section className="relative h-[90vh] mb-16 rounded-2xl overflow-hidden">
-        <div 
+        <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ 
-            backgroundImage: `url(https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExaXVoZmIxZTBwc2F1ZTd4Y2hzcDFjdWZqbm1udDVhd29xZHVhMDk3ZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/KMGq4B8xKr5Qz28CU6/giphy.gif)` 
+          style={{
+            backgroundImage: `url(https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExaXVoZmIxZTBwc2F1ZTd4Y2hzcDFjdWZqbm1udDVhd29xZHVhMDk3ZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/KMGq4B8xKr5Qz28CU6/giphy.gif)`,
           }}
         />
         <div className="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
@@ -97,7 +113,9 @@ function Home() {
               By Creators, For Creators
             </h1>
             <p className="text-2xl text-white max-w-3xl mx-auto mb-10">
-              Join the next generation of creative collaboration. Endo is your all-in-one platform to create, collaborate, and thrive in the digital age.
+              Join the next generation of creative collaboration. Endo is your
+              all-in-one platform to create, collaborate, and thrive in the
+              digital age.
             </p>
             <div className="flex justify-center gap-6">
               <Link
@@ -124,7 +142,9 @@ function Home() {
             className="glass-card p-8 rounded-xl transition-all duration-300 hover:transform hover:-translate-y-1"
           >
             <div className="mb-4 text-purple-400">{feature.icon}</div>
-            <h3 className="text-xl font-semibold mb-2 text-white">{feature.title}</h3>
+            <h3 className="text-xl font-semibold mb-2 text-white">
+              {feature.title}
+            </h3>
             <p className="text-blue-200">{feature.description}</p>
           </div>
         ))}
@@ -140,7 +160,9 @@ function Home() {
               <div className="w-12 h-12 mx-auto rounded-full bg-purple-400/10 flex items-center justify-center text-purple-400">
                 {benefit.icon}
               </div>
-              <h3 className="text-xl font-semibold text-white">{benefit.title}</h3>
+              <h3 className="text-xl font-semibold text-white">
+                {benefit.title}
+              </h3>
               <p className="text-blue-200">{benefit.description}</p>
             </div>
           ))}
